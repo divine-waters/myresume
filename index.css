@@ -219,11 +219,41 @@ page[size="A4"] {
     width: 1cm;
 }
 
+/* Download PDF Button Styles */
+.download-pdf-button {
+    display: inline-block;
+    background-color: #484444; /* Theme color (matches leftPanel) */
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 0.35cm;
+    margin-top: 0.3cm;
+    margin-bottom: 0.3cm;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid #333;
+}
+
+.download-pdf-button:hover,
+.download-pdf-button:focus {
+    background-color: #3a3636; /* Darker shade on hover/focus */
+    color: white;
+    text-decoration: none;
+}
+
+.download-pdf-button .fa-download {
+    margin-right: 8px; /* Space between icon and text */
+}
+
 @media print {
     .page-break {
       break-before: page;
       /* For older browsers: */
       page-break-before: always;
+    }
+    .download-pdf-button {
+        display: none !important; /* Hide download button when printing the HTML page */
     }
   }
   
