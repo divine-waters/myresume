@@ -1,0 +1,342 @@
+/* Fonts */
+
+/* Family */
+h1 { 
+    font-family: 'Julius Sans One', sans-serif;
+}
+  
+h2 { /* Contact, Skills, Education, About me, Work Experience */
+    font-family: 'Archivo Narrow', sans-serif;
+    margin-top: 0.5cm;
+    margin-bottom: 0.3cm;
+}
+  
+h3 { /* Accountant */
+    font-family: 'Open Sans', sans-serif;
+}
+  
+.jobPosition span, 
+.projectName span {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+}
+
+.projectName {
+    margin-top: 0.15cm;
+    margin-bottom: 0.2cm;
+}
+
+.upperCase {
+    text-transform: uppercase; 
+}
+  
+.smallText, 
+.smallText span, 
+.smallText p, 
+.smallText a {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: justify;
+    line-height: 1.2
+}
+  
+/* End Family */
+  
+/* Colors */
+h1 { 
+    color: #111; 
+}
+  
+.leftPanel, 
+.leftPanel a {
+    color: #bebebe;
+    text-decoration: none;
+}
+  
+.leftPanel h2 {
+    color: white;
+}
+  
+/* End Colors */
+  
+/* Sizes */
+h1 { 
+    font-weight: 300; 
+    font-size: 1.2cm;
+    transform: scale(1,1.15); 
+    margin-bottom: 0.3cm;
+    margin-top: 0.3cm;
+    text-transform: uppercase; 
+}
+  
+.leftPanel, 
+.leftPanel a {
+    font-size: 0.38cm;
+}
+  
+.projectName span, 
+.jobPosition span {
+    font-size: 0.35cm;
+}
+
+.smallText ul {
+    margin-top: 0.15cm;
+    margin-bottom: 0.15cm;
+}
+
+.smallText li {
+    margin-bottom: 0.009;
+    line-height: 1.2;
+}
+  
+.smallText, 
+.smallText span, 
+.smallText p, 
+.smallText a {
+    font-size: 0.35cm;
+}
+  
+.leftPanel .smallText, 
+.leftPanel .smallText span, 
+.leftPanel .smallText p, 
+.smallText a {
+    font-size: 0.45cm;
+}
+
+.leftPanel .smallText p {
+    margin-top: 0.05cm;
+    margin-bottom: 0.05cm;
+}
+  
+.contactIcon {
+    width: 0.5cm;
+    text-align: center;
+    margin-right: 0.2cm;
+}
+  
+p {
+    margin-top: 0.1cm;
+    margin-bottom: 0.1cm;
+}
+/* End Sizes */
+  
+.bolded {
+    font-weight: bold;
+}
+  
+.white {
+    color: white;
+}
+/* End Fonts */
+  
+/* Layout */
+body {
+    background: rgb(204,204,204); 
+    width: 21cm;
+    height: 29.7cm;
+    margin: 0 auto;
+}
+  
+/* Printing */
+page {
+    background: white;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.5cm;
+}
+  
+page[size="A4"] {  
+    width: 21cm;
+    height: 29.7cm; 
+}
+  
+@page {
+    size: 21cm 29.7cm;
+    padding: 0;
+    margin: 0mm;
+    border: none;
+    border-collapse: collapse;
+}
+/* End Printing */
+  
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+  
+.leftPanel {
+    width: 27%;
+    background-color: #484444;
+    padding: 0.5cm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.rightPanel {
+    width: 73%;
+    padding: 0.7cm;
+}
+  
+.leftPanel img {
+    width: 4cm;
+    height: 4cm;
+    margin-bottom: 0.5cm;
+    border-radius: 50%;
+    border: 0.15cm solid white;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+  
+.leftPanel .details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+  
+.skill {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0.1cm;
+}
+  
+.bottomLineSeparator {
+    border-bottom: 0.05cm solid white;
+    padding-bottom: 0.3cm;
+}
+  
+.yearsOfExperience {
+    width: 1.6cm;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+  
+.alignleft {
+    text-align: left !important;
+    width: 1cm;
+}
+
+@media print {
+    .page-break {
+      break-before: page;
+      /* For older browsers: */
+      page-break-before: always;
+    }
+  }
+  
+.alignright {
+    text-align: right !important;
+    width: 0.6cm;
+    margin-right: 0.1cm;
+}
+  
+.workExperience > ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+  
+.workExperience > ul > li {
+    position: relative;
+    margin-bottom: 0.22cm;
+    padding-bottom: 0.12cm;
+    padding-left: 0.5cm;
+}
+  
+.workExperience > ul > li:before {
+    background-color: #b8abab;
+    width: 0.05cm;
+    content: '';
+    position: absolute;
+    top: 0.1cm;
+    bottom: -0.2cm;
+    left: 0.05cm;
+}
+  
+.workExperience > ul > li::after {
+    content: '';
+    position: absolute;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' viewBox='0 0 32 32' focusable='false'%3E%3Ccircle stroke='none' fill='%23484444' cx='16' cy='16' r='10'%3E%3C/circle%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: -0.09cm;
+    top: 0;
+    width: 0.35cm;
+    height: 0.35cm;
+}
+  
+.jobPosition {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0.15cm;
+}
+
+/* Fix for multiple job positions */
+.jobPosition + .jobPosition {
+    margin-top: 0.10cm;
+}
+  
+.item {
+    padding-bottom: 0.5cm;
+    padding-top: 0.3cm;
+}
+  
+.item h2 {
+    margin-top: 0;
+}
+  
+.workExperience > ul > li ul {
+    padding-left: 0.8cm;
+    list-style-type: disc;
+    margin-top: 0.15cm;
+    margin-bottom: 0.15cm;
+}
+
+.workExperience > ul > li ul li {
+    margin-bottom: 0.15cm;
+    line-height: 1.4;
+}
+
+/* Prevent default bullets from appearing next to jobPosition entries */
+.workExperience > ul > li {
+    list-style-type: none;
+}
+
+/* Add spacing between sections */
+.rightPanel > div {
+    margin-bottom: 0.5cm;
+}
+
+/* Improve skills section spacing */
+.leftPanel .item {
+    padding-bottom: 0.3cm;
+    padding-top: 0.2cm;
+}
+
+.jobPosition span,
+.companyName {
+    font-size: 0.39cm;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-weight: 700;
+    color: #222;
+}
+
+/* Tighter spacing between company name and description */
+.companyName {
+    text-transform: uppercase;
+    margin-bottom: 0.01cm;   /* was 0.05cm */
+    margin-top: 0.03cm;      /* was 0.1cm */
+}
+
+.companyDescription {
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 0.39cm;
+    font-weight: 500;
+    color: #222;
+    margin-bottom: 0.06cm;   /* was 0.15cm */
+    margin-top: 0;           /* ensure no extra top margin */
+    margin-left: 0.02cm;
+}
