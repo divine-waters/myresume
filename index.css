@@ -219,40 +219,42 @@ page[size="A4"] {
     width: 1cm;
 }
 
-/* Download PDF Button Styles */
-.download-pdf-button {
-    display: inline-block;
-    background-color: #484444; /* Theme color (matches leftPanel) */
+/* Floating Download PDF Button Styles */
+.floating-download-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #484444; /* Matches leftPanel color */
     color: white;
-    padding: 8px 15px;
+    padding: 10px 15px;
     text-decoration: none;
     border-radius: 5px;
     font-family: 'Archivo Narrow', sans-serif;
-    font-size: 0.35cm;
-    margin-top: 0.3cm;
-    margin-bottom: 0.3cm;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border: 1px solid #333;
+    font-size: 0.38cm; /* Slightly larger for better visibility */
+    z-index: 1000; /* Ensure it's on top of other content */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
 }
 
-.download-pdf-button:hover,
-.download-pdf-button:focus {
-    background-color: #3a3636; /* Darker shade on hover/focus */
+.floating-download-button:hover,
+.floating-download-button:focus {
+    background-color: #3a3636; /* Darker shade on hover */
     color: white;
     text-decoration: none;
 }
 
-.download-pdf-button .fa-download {
+.floating-download-button .fa-download {
     margin-right: 8px; /* Space between icon and text */
 }
 
 @media print {
     .page-break {
       break-before: page;
-      /* For older browsers: */
       page-break-before: always;
     }
-    .download-pdf-button {
+    .floating-download-button {
         display: none !important; /* Hide download button when printing the HTML page */
     }
   }
