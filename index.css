@@ -174,9 +174,11 @@ page[size="A4"] {
     align-items: center;
 }
   
-.rightPanel {
-    width: 73%;
-    padding: 0.7cm;
+.rightPanel > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  page-break-after: auto; /* Legacy support */
+  break-after: auto;      /* Modern standard */
 }
   
 .leftPanel img {
